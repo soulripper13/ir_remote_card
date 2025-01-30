@@ -1,0 +1,90 @@
+:host {
+  display: block;
+  padding: 1rem;
+  --sz: 1.1;
+  --button-size: 3.5rem;
+  --button-spacing: 0.2rem;
+  --primary-text-color: rgb(106, 106, 106);
+}
+
+.remote-body {
+  display: grid;
+  grid-template-rows: repeat(13, auto);
+  grid-row-gap: calc(var(--sz) * 1.2rem);
+  background: linear-gradient(90deg, rgba(22,21,21,1) 0%, rgba(37,37,37,1) 10%, rgba(37,37,37,1) 90%, rgba(22,21,21,1) 100%);
+  border: solid #b71c1c calc(var(--sz) * 0.0714rem);
+  border-radius: calc(var(--sz) * 2.8rem);
+  width: calc(var(--sz) * 11rem);
+  padding: calc(var(--sz) * 1.2rem);
+  box-shadow: 0 calc(var(--sz) * 0.214rem) calc(var(--sz) * 0.214rem) rgb(0 0 0 / 10%);
+}
+
+.remote-button {
+  background: #2f2f2f;
+  color: var(--primary-text-color);
+  border: solid rgb(15 15 15) calc(var(--sz) * 0.0714rem);
+  box-shadow: rgb(0 0 0 / 15%) 0px calc(var(--sz) * 0.063rem) calc(var(--sz) * 0.188rem);
+  padding: 0.75rem;
+  margin: 0.2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: transform 0.1s ease;
+}
+
+.remote-button.large {
+  width: calc(var(--sz) * 2.5rem);
+  height: calc(var(--sz) * 2.5rem);
+}
+
+.remote-button:active {
+  transform: scale(0.95);
+  box-shadow: none;
+}
+
+.dpadContainer {
+  display: grid;
+  grid-template-areas:
+    ". up ."
+    "left center right"
+    ". down .";
+  gap: var(--button-spacing);
+  margin: 0 auto;
+  justify-items: center;
+  align-items: center;
+  width: calc(var(--button-size) * 3 + var(--button-spacing) * 2);
+  height: calc(var(--button-size) * 3 + var(--button-spacing) * 2);
+  background-color: #555;
+  border-radius: 50%;
+  padding: var(--button-spacing);
+}
+
+#up-button { grid-area: up; }
+#right-button { grid-area: right; }
+#left-button { grid-area: left; }
+#down-button { grid-area: down; }
+
+#center-button {
+  grid-area: center;
+  border-radius: 50%;
+  background-color: #666;
+  border-color: rgb(76, 80, 84);
+  width: calc(var(--button-size) * 1.5);
+  height: calc(var(--button-size) * 1.5);
+}
+
+.button-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.button-row.spacer {
+  height: calc(var(--sz) * 1.2rem);
+}
+
+.fa-icon {
+  font-size: calc(var(--sz) * 1.5rem);
+}
