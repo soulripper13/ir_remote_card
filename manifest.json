@@ -1,0 +1,8 @@
+{
+  "name": "IR Remote Card",
+  "render_readme": true,
+  "filename": "ir-remote-card.js",
+  "domains": ["script"],
+  "homeassistant": "2023.8.0",
+  "content_in_root": false
+}

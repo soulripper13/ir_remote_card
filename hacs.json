@@ -1,0 +1,6 @@
+{
+  "name": "IR Remote Card",
+  "domains": ["script"],
+  "render_readme": true,
+  "homeassistant": "2023.8.0"
+}
